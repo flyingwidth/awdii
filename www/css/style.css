@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --navy : #2B3467;
+    --navy-hover : #39437a;
+    --navy-active : #232a55;
+    --light-blue : #f2f9fd;
+    --light-blue-active : #d9e5ec;
+    --grey : #aaa;
+    --black : #111111;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light-blue);
+    font-size: 18px;
+}
+
+h1,h2,h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+}
+
+.cont {
+    padding-right: 18%;
+	padding-left: 18%;
+}
+
+nav {
+    background-color: var(--light-blue);
+    position: fixed;
+    height: 72px;
+    width: 100%;
+    color: var(--black);
+    z-index: 999;
+    border-bottom: 1px solid var(--grey);
+    box-shadow: 0px 6px 8px rgba(43, 52, 103, 0.15);
+}
+
+.nav-link {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link ul {
+    display: flex;
+    gap: 54px;
+    padding: 0;
+}
+
+.nav-link ul li {    
+    list-style: none;
+}
+
+.nav-link a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 72px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--navy);
+}
+
+.nav-link a::before {
+    transition: all 0.15s;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+}
+
+.nav-link a:hover::before {
+    height: 3px;
+    background-color: var(--navy);
+}
+
+footer {
+    margin-top: 64px;
+    background-color: var(--black);
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.footer-link {
+    display: flex;
+    column-gap: 72px;
+    row-gap: 24px;
+    align-items: center;
+}
+
+.footer-link ul {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.footer-link ul li {
+    list-style: none;
+}
+
+.footer-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.jumbotron {
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 75vh;
+    color: white;
+    background: linear-gradient(0deg, rgba(43, 52, 103, 0.75), rgba(43, 52, 103, 0.25)), url('https://storage.googleapis.com/floatreactor/jumbotron.jpg');
+    background-size: cover;
+    background-position: 40% 30%;
+}
+
+.welcome .title {
+    font-size: 3.2rem;
+}
+
+.welcome p {
+    width: auto;
+    max-width: 600px;
+    margin-top: 16px;
+}
+
+.welcome .btn {
+    margin: 48px 0;
+}
+
+.card {
+    background-color: var(--light-blue);
+    padding: 32px;
+    color: var(--black);
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+    box-shadow: 0px 6px 8px rgba(43, 52, 103, 0.15);
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin: 32px 0;
+}
+
+#content {
+    flex-basis: 75%;
+}
+
+#aside {
+    flex-basis: 25%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+aside div {
+    width: 100%;
+    margin-top: 12px;
+}
+
+aside .b {
+    font-weight: bold;
+}
+
+aside .avatar {
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+aside h2 {
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.title-article {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 18px;
+    color: var(--navy);
+}
+
+article:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 32px;
+    margin-top: 24px;
+}
+
+.product {
+    width: calc((100% - 24px)/2);
+    padding: 0;
+    height: 100%;
+    min-height: 0;
+}
+
+.product div {
+    padding: 32px;
+    padding-top: 24px;
+}
+
+.product img {
+    width: 100%;
+    aspect-ratio: 1.6/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.product h3 {
+    margin-bottom: 4px;
+}
+
+.product p {
+    margin-top: 16px;
+}
+
+.review .profile {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.review .review-header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.review .review-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.highlight-small {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    background-color: var(--navy);
+    color: var(--light-blue);
+    border-radius: 4px;
+}
+
+.arrow {
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;   
+    border-left: 8px solid var(--navy);
+}
+
+@media screen and (max-width: 2160px){
+    .cont {
+        padding-left: 16%;
+        padding-right: 16%;
+    }
+}
+
+@media screen and (max-width: 1220px){
+    .cont {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        margin-top: 5%;
+        flex-direction: column;
+    }
+
+    .welcome {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .product {
+        width: 100%;
+    }
+
+    .footer-link {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .product {
+        padding: 0;
+    }
+
+    .product div {
+        padding: 24px;
+        padding-top: 16px;
+    }
+    
+    .product img {
+        width: 100%;
+        aspect-ratio: 1.6/1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .logo {
+        display: none;
+    }
+
+    footer {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .nav-link ul, .footer-link ul {
+        gap: 8vw;
+    }
+}
